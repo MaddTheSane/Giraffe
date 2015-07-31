@@ -14,7 +14,7 @@
 @synthesize maxColors;
 @synthesize hasTransparentFirst;
 
-- (id)initWithTransparentFirst:(BOOL)transparentFirst {
+- (instancetype)initWithTransparentFirst:(BOOL)transparentFirst {
 	if ((self = [self init])) {
 		ANGifColor myColor;
 		myColor.red = 0;
@@ -26,7 +26,7 @@
 	return self;
 }
 
-- (id)init {
+- (instancetype)init {
 	if ((self = [super init])) {
 		_entries = (ANGifColorTableEntry *)malloc(sizeof(ANGifColorTableEntry));
 		_totalAlloced = 1;
@@ -84,9 +84,6 @@
 
 - (void)dealloc {
 	free(_entries);
-#if !__has_feature(objc_arc)
-	[super dealloc];
-#endif
 }
 
 #pragma mark - Sorting -

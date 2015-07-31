@@ -16,7 +16,7 @@
 @synthesize offsetX, offsetY;
 @synthesize delayTime;
 
-- (id)initWithPixelSource:(id<ANGifImageFramePixelSource>)aSource colorTable:(ANColorTable *)table delayTime:(NSTimeInterval)delay {
+- (instancetype)initWithPixelSource:(id<ANGifImageFramePixelSource>)aSource colorTable:(ANColorTable *)table delayTime:(NSTimeInterval)delay {
 	if ((self = [super init])) {
 		self.pixelSource = aSource;
 		self.localColorTable = table;
@@ -25,7 +25,7 @@
 	return self;
 }
 
-- (id)initWithPixelSource:(id<ANGifImageFramePixelSource>)aSource delayTime:(NSTimeInterval)delay {
+- (instancetype)initWithPixelSource:(id<ANGifImageFramePixelSource>)aSource delayTime:(NSTimeInterval)delay {
 	self = [self initWithPixelSource:aSource
 						  colorTable:nil delayTime:delay];
 	return self;
@@ -57,15 +57,5 @@
 	
 	return [NSData dataWithData:encodedData]; // return immutable version
 }
-
-#if !__has_feature(objc_arc)
-
-- (void)dealloc {
-	self.pixelSource = nil;
-	self.localColorTable = nil;
-	[super dealloc];
-}
-
-#endif
 
 @end

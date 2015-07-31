@@ -27,20 +27,11 @@ NSColor * NSColorFromBMPixel (BMPixel pixel);
 #endif
 
 @interface ANImageBitmapRep : BitmapContextRep <BitmapScaleManipulator, BitmapCropManipulator, BitmapRotationManipulator, NSCopying> {
-#if __has_feature(objc_arc) == 1
 	__strong NSArray * baseClasses;
-#else
-	NSArray * baseClasses;
-#endif
 }
 
-#if __has_feature(objc_arc) == 1
-+ (ANImageBitmapRep *)imageBitmapRepWithCGSize:(CGSize)avgSize __attribute__((ns_returns_autoreleased));
-+ (ANImageBitmapRep *)imageBitmapRepWithImage:(ANImageObj *)anImage __attribute__((ns_returns_autoreleased));
-#else
-+ (ANImageBitmapRep *)imageBitmapRepWithCGSize:(CGSize)avgSize;
-+ (ANImageBitmapRep *)imageBitmapRepWithImage:(ANImageObj *)anImage;
-#endif
++ (instancetype)imageBitmapRepWithCGSize:(CGSize)avgSize;
++ (instancetype)imageBitmapRepWithImage:(ANImageObj *)anImage;
 
 /**
  * Reverses the RGB values of all pixels in the bitmap.  This causes
@@ -85,10 +76,6 @@ NSColor * NSColorFromBMPixel (BMPixel pixel);
 /**
  * Creates a new UIImage or NSImage from the bitmap context.
  */
-#if __has_feature(objc_arc) == 1
-- (ANImageObj *)image __attribute__((ns_returns_autoreleased));
-#else
 - (ANImageObj *)image;
-#endif
 
 @end

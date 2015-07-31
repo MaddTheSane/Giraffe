@@ -12,7 +12,7 @@
 @implementation ANGifDataSubblock
 
 + (NSArray *)dataSubblocksForData:(NSData *)largeData {
-	NSMutableArray * array = [NSMutableArray array];
+	NSMutableArray * array = [[NSMutableArray alloc] init];
 	
 	NSUInteger length = [largeData length];
 	const char * bytes = (const char *)[largeData bytes];
@@ -24,21 +24,14 @@
 		NSData * theData = [NSData dataWithBytes:&bytes[index] length:blockLen];
 		ANGifDataSubblock * subblock = [[ANGifDataSubblock alloc] initWithBlockData:theData];
 		[array addObject:subblock];
-#if !__has_feature(objc_arc)
-		[subblock release];
-#endif
 	}
 	
 	return [NSArray arrayWithArray:array];
 }
 
-- (id)initWithBlockData:(NSData *)theData {
+- (instancetype)initWithBlockData:(NSData *)theData {
 	if ((self = [super init])) {
-#if __has_feature(objc_arc)
 		subblockData = theData;
-#else
-		subblockData = [theData retain];
-#endif
 	}
 	return self;
 }
@@ -57,14 +50,5 @@
 	[fileHandle writeData:[NSData dataWithBytes:&length length:1]];
 	[fileHandle writeData:subblockData];
 }
-
-#if !__has_feature(objc_arc)
-
-- (void)dealloc {
-	[subblockData release];
-	[super dealloc];
-}
-
-#endif
 
 @end

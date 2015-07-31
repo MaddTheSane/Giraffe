@@ -23,13 +23,4 @@
 	[anInvocation invokeWithTarget:bitmapContext];
 }
 
-#if __has_feature(objc_arc) != 1
-
-- (void)dealloc {
-	self.bitmapContext = nil;
-	[super dealloc];
-}
-
-#endif
-
 @end

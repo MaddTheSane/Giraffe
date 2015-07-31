@@ -34,15 +34,15 @@
  * the gif decoder.
  * @param gct The global descriptor table, or nil if no GCT should be used.
  */
-- (id)initWithFileHandle:(NSFileHandle *)handle size:(CGSize)aSize
-		globalColorTable:(ANColorTable *)gct;
+- (instancetype)initWithFileHandle:(NSFileHandle *)handle size:(CGSize)aSize
+		globalColorTable:(ANColorTable *)gct NS_DESIGNATED_INITIALIZER;
 
 /**
  * A call to this method is equivalent to a call to
  * initWithFileHandle:size:globalColorTable: with a valid file descriptor
  * opened for writing to fileName.
  */
-- (id)initWithOutputFile:(NSString *)fileName size:(CGSize)aSize
+- (instancetype)initWithOutputFile:(NSString *)fileName size:(CGSize)aSize
 		globalColorTable:(ANColorTable *)gct;
 
 /**

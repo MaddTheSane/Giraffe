@@ -23,7 +23,7 @@ BOOL LZWDataGetBit (UInt8 * _bytePool, NSUInteger bitIndex);
 
 + (NSData *)lzwExpandData:(NSData *)existingData;
 
-- (id)initWithData:(NSData *)initialData;
+- (instancetype)initWithData:(NSData *)initialData NS_DESIGNATED_INITIALIZER;
 - (void)addBit:(BOOL)flag;
 - (BOOL)getBitAtIndex:(NSUInteger)bitIndex;
 

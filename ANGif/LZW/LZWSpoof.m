@@ -41,19 +41,12 @@
 	}
 	[destinationBuffer addBit:YES];
 	
-#if !__has_feature(objc_arc)
-	[existingBuffer release];
-	NSData * theData = [destinationBuffer convertToData];
-	[destinationBuffer release];
-	return theData;
-#else
 	return [destinationBuffer convertToData];
-#endif
 }
 
 #pragma mark Bit Buffer
 
-- (id)initWithData:(NSData *)initialData {
+- (instancetype)initWithData:(NSData *)initialData {
 	if ((self = [super init])) {
 		_totalSize = [initialData length];
 		_bytePool = (UInt8 *)malloc(_totalSize);
@@ -63,7 +56,7 @@
 	return self;
 }
 
-- (id)init {
+- (instancetype)init {
 	if ((self = [super init])) {
 		_totalSize = kAllocBufferSize;
 		_bytePool = (UInt8 *)malloc(_totalSize);
@@ -109,9 +102,6 @@
 
 - (void)dealloc {
 	free(_bytePool);
-#if !__has_feature(objc_arc)
-	[super dealloc];
-#endif
 }
 
 @end

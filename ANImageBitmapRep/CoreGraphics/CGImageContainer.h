@@ -7,8 +7,6 @@
 //
 
 
-#if __has_feature(objc_arc) != 1
-
 #import <Foundation/Foundation.h>
 
 #if TARGET_OS_IPHONE
@@ -17,6 +15,8 @@
 #import <Quartz/Quartz.h>
 #endif
 
+
+#if __has_feature(objc_arc) != 1
 
 @interface CGImageContainer : NSObject {
     CGImageRef image;

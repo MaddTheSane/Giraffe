@@ -16,7 +16,7 @@
 @synthesize applicationData;
 
 - (NSData *)encodeBlock {
-	NSMutableData * data = [NSMutableData data];
+	NSMutableData * data = [[NSMutableData alloc] init];
 	
 	UInt8 aByte = 0x21;
 	[data appendBytes:&aByte length:1]; // extension introducer
@@ -32,16 +32,5 @@
 	
 	return [NSData dataWithData:data];
 }
-
-#if !__has_feature(objc_arc)
-
-- (void)dealloc {
-	self.applicationIdentifier = nil;
-	self.applicationAuthCode = nil;
-	self.applicationData = nil;
-	[super dealloc];
-}
-
-#endif
 
 @end

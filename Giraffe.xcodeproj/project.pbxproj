@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,65 @@
 		2899E5220DE3E06400AC0155 /* GiraffeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* GiraffeViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* GiraffeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* GiraffeViewController.m */; };
+		55916F181B6BDBE70098F38E /* Giraffe.h in Headers */ = {isa = PBXBuildFile; fileRef = 55916F171B6BDBE70098F38E /* Giraffe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55916F1E1B6BDBE70098F38E /* Giraffe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55916F131B6BDBE70098F38E /* Giraffe.framework */; };
+		55916F251B6BDBE70098F38E /* Giraffe_OSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55916F241B6BDBE70098F38E /* Giraffe_OSXTests.m */; };
+		55916F2C1B6BDBFB0098F38E /* ANGifEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B87146572210095DA13 /* ANGifEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55916F2D1B6BDBFF0098F38E /* ANGifEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B88146572210095DA13 /* ANGifEncoder.m */; };
+		55916F2E1B6BDC040098F38E /* ANGifGraphicControlExt.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B8A146572210095DA13 /* ANGifGraphicControlExt.m */; };
+		55916F2F1B6BDC070098F38E /* ANGifGraphicControlExt.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B89146572210095DA13 /* ANGifGraphicControlExt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55916F301B6BDC0B0098F38E /* ANGifLogicalScreenDesc.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B8B146572210095DA13 /* ANGifLogicalScreenDesc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55916F311B6BDC0F0098F38E /* ANGifLogicalScreenDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B8C146572210095DA13 /* ANGifLogicalScreenDesc.m */; };
+		55916F321B6BDC280098F38E /* ANAvgColorTable.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B93146572210095DA13 /* ANAvgColorTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55916F331B6BDC280098F38E /* ANAvgColorTable.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B94146572210095DA13 /* ANAvgColorTable.m */; };
+		55916F341B6BDC280098F38E /* ANColorTable.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B95146572210095DA13 /* ANColorTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55916F351B6BDC280098F38E /* ANColorTable.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B96146572210095DA13 /* ANColorTable.m */; };
+		55916F361B6BDC350098F38E /* ANCutColorTable.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B98146572210095DA13 /* ANCutColorTable.h */; };
+		55916F371B6BDC350098F38E /* ANCutColorTable.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B99146572210095DA13 /* ANCutColorTable.m */; };
+		55916F381B6BDC350098F38E /* ANMutableColorArray.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B9A146572210095DA13 /* ANMutableColorArray.h */; };
+		55916F391B6BDC350098F38E /* ANMutableColorArray.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B9B146572210095DA13 /* ANMutableColorArray.m */; };
+		55916F3A1B6BDC430098F38E /* ANGifDataSubblock.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B9D146572210095DA13 /* ANGifDataSubblock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55916F3B1B6BDC430098F38E /* ANGifDataSubblock.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B9E146572210095DA13 /* ANGifDataSubblock.m */; };
+		55916F3C1B6BDC430098F38E /* ANGifImageDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B9F146572210095DA13 /* ANGifImageDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55916F3D1B6BDC430098F38E /* ANGifImageDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0BA0146572210095DA13 /* ANGifImageDescriptor.m */; };
+		55916F3E1B6BDC430098F38E /* ANGifImageFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0BA1146572210095DA13 /* ANGifImageFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55916F3F1B6BDC430098F38E /* ANGifImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0BA2146572210095DA13 /* ANGifImageFrame.m */; };
+		55916F401B6BDC430098F38E /* ANGifImageFramePixelSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0BA3146572210095DA13 /* ANGifImageFramePixelSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55916F411B6BDC4C0098F38E /* LZWSpoof.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0BA5146572210095DA13 /* LZWSpoof.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55916F421B6BDC4C0098F38E /* LZWSpoof.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0BA6146572210095DA13 /* LZWSpoof.m */; };
+		55916F431B6BDD430098F38E /* ANImageBitmapRep.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0BEA146574EA0095DA13 /* ANImageBitmapRep.h */; };
+		55916F441B6BDD430098F38E /* ANImageBitmapRep.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0BEB146574EA0095DA13 /* ANImageBitmapRep.m */; };
+		55916F451B6BDD770098F38E /* NSImage+ANImageBitmapRep.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0BEF146574EA0095DA13 /* NSImage+ANImageBitmapRep.h */; };
+		55916F461B6BDD770098F38E /* NSImage+ANImageBitmapRep.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0BF0146574EA0095DA13 /* NSImage+ANImageBitmapRep.m */; };
+		55916F471B6BDD770098F38E /* OSCommonImage.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0BF1146574EA0095DA13 /* OSCommonImage.h */; };
+		55916F481B6BDD770098F38E /* OSCommonImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0BF2146574EA0095DA13 /* OSCommonImage.m */; };
+		55916F491B6BDD770098F38E /* UIImage+ANImageBitmapRep.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0BF3146574EA0095DA13 /* UIImage+ANImageBitmapRep.h */; };
+		55916F4A1B6BDD770098F38E /* UIImage+ANImageBitmapRep.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0BF4146574EA0095DA13 /* UIImage+ANImageBitmapRep.m */; };
+		55916F4B1B6BDD7B0098F38E /* CGContextCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0BF6146574EA0095DA13 /* CGContextCreator.h */; };
+		55916F4C1B6BDD7B0098F38E /* CGContextCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0BF7146574EA0095DA13 /* CGContextCreator.m */; };
+		55916F4D1B6BDD7B0098F38E /* CGImageContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0BF8146574EA0095DA13 /* CGImageContainer.h */; };
+		55916F4E1B6BDD7B0098F38E /* CGImageContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0BF9146574EA0095DA13 /* CGImageContainer.m */; };
+		55916F4F1B6BDD800098F38E /* BitmapContextManipulator.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0BFB146574EA0095DA13 /* BitmapContextManipulator.h */; };
+		55916F501B6BDD800098F38E /* BitmapContextManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0BFC146574EA0095DA13 /* BitmapContextManipulator.m */; };
+		55916F511B6BDD800098F38E /* BitmapCropManipulator.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0BFD146574EA0095DA13 /* BitmapCropManipulator.h */; };
+		55916F521B6BDD800098F38E /* BitmapCropManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0BFE146574EA0095DA13 /* BitmapCropManipulator.m */; };
+		55916F531B6BDD800098F38E /* BitmapRotationManipulator.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0BFF146574EA0095DA13 /* BitmapRotationManipulator.h */; };
+		55916F541B6BDD800098F38E /* BitmapRotationManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0C00146574EA0095DA13 /* BitmapRotationManipulator.m */; };
+		55916F551B6BDD800098F38E /* BitmapScaleManipulator.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0C01146574EA0095DA13 /* BitmapScaleManipulator.h */; };
+		55916F561B6BDD800098F38E /* BitmapScaleManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0C02146574EA0095DA13 /* BitmapScaleManipulator.m */; };
+		55916F571B6BDDD40098F38E /* BitmapContextRep.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0BEC146574EA0095DA13 /* BitmapContextRep.h */; };
+		55916F581B6BDDD40098F38E /* BitmapContextRep.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0BED146574EA0095DA13 /* BitmapContextRep.m */; };
+		55916F631B6BDE820098F38E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55916F621B6BDE820098F38E /* AppDelegate.m */; };
+		55916F651B6BDE820098F38E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55916F641B6BDE820098F38E /* main.m */; };
+		55916F671B6BDE820098F38E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55916F661B6BDE820098F38E /* Images.xcassets */; };
+		55916F6A1B6BDE820098F38E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55916F681B6BDE820098F38E /* MainMenu.xib */; };
+		55916F761B6BDE820098F38E /* MacTestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55916F751B6BDE820098F38E /* MacTestAppTests.m */; };
+		55916F7D1B6BDE9A0098F38E /* Giraffe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55916F131B6BDBE70098F38E /* Giraffe.framework */; };
+		55916F7E1B6BDE9A0098F38E /* Giraffe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 55916F131B6BDBE70098F38E /* Giraffe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		55916F821B6BDF410098F38E /* ANGifAppExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B8E146572210095DA13 /* ANGifAppExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55916F831B6BDF4B0098F38E /* ANGifAppExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B8F146572210095DA13 /* ANGifAppExtension.m */; };
+		55916F841B6BDF570098F38E /* ANGifNetscapeAppExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B90146572210095DA13 /* ANGifNetscapeAppExtension.h */; };
+		55916F851B6BDF5B0098F38E /* ANGifNetscapeAppExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B91146572210095DA13 /* ANGifNetscapeAppExtension.m */; };
 		FA9A0BA7146572210095DA13 /* ANGifEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B88146572210095DA13 /* ANGifEncoder.m */; };
 		FA9A0BA8146572210095DA13 /* ANGifGraphicControlExt.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B8A146572210095DA13 /* ANGifGraphicControlExt.m */; };
 		FA9A0BA9146572210095DA13 /* ANGifLogicalScreenDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B8C146572210095DA13 /* ANGifLogicalScreenDesc.m */; };
@@ -46,6 +105,44 @@
 		FA9A0C1D1465C0D70095DA13 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9A0C1C1465C0D70095DA13 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		55916F1F1B6BDBE70098F38E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55916F121B6BDBE70098F38E;
+			remoteInfo = "Giraffe-OSX";
+		};
+		55916F701B6BDE820098F38E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55916F5C1B6BDE810098F38E;
+			remoteInfo = MacTestApp;
+		};
+		55916F7F1B6BDE9A0098F38E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55916F121B6BDBE70098F38E;
+			remoteInfo = "Giraffe-OSX";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		55916F811B6BDE9A0098F38E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				55916F7E1B6BDE9A0098F38E /* Giraffe.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* GiraffeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiraffeAppDelegate.h; sourceTree = "<group>"; };
@@ -57,8 +154,24 @@
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28D7ACF60DDB3853001CB0EB /* GiraffeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiraffeViewController.h; sourceTree = "<group>"; };
 		28D7ACF70DDB3853001CB0EB /* GiraffeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiraffeViewController.m; sourceTree = "<group>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; usesTabs = 0; };
 		32CA4F630368D1EE00C91783 /* Giraffe_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Giraffe_Prefix.pch; sourceTree = "<group>"; };
+		55916F131B6BDBE70098F38E /* Giraffe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Giraffe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55916F161B6BDBE70098F38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55916F171B6BDBE70098F38E /* Giraffe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Giraffe.h; sourceTree = "<group>"; };
+		55916F1D1B6BDBE70098F38E /* Giraffe-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Giraffe-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55916F231B6BDBE70098F38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55916F241B6BDBE70098F38E /* Giraffe_OSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Giraffe_OSXTests.m; sourceTree = "<group>"; };
+		55916F5D1B6BDE810098F38E /* MacTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55916F601B6BDE820098F38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55916F611B6BDE820098F38E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		55916F621B6BDE820098F38E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		55916F641B6BDE820098F38E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55916F661B6BDE820098F38E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		55916F691B6BDE820098F38E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		55916F6F1B6BDE820098F38E /* MacTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55916F741B6BDE820098F38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55916F751B6BDE820098F38E /* MacTestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacTestAppTests.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Giraffe-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Giraffe-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		FA9A0B87146572210095DA13 /* ANGifEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANGifEncoder.h; sourceTree = "<group>"; };
 		FA9A0B88146572210095DA13 /* ANGifEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANGifEncoder.m; sourceTree = "<group>"; };
@@ -132,6 +245,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		55916F0F1B6BDBE70098F38E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55916F1A1B6BDBE70098F38E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55916F1E1B6BDBE70098F38E /* Giraffe.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55916F5A1B6BDE810098F38E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55916F7D1B6BDE9A0098F38E /* Giraffe.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55916F6C1B6BDE820098F38E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -156,6 +299,10 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* Giraffe.app */,
+				55916F131B6BDBE70098F38E /* Giraffe.framework */,
+				55916F1D1B6BDBE70098F38E /* Giraffe-OSXTests.xctest */,
+				55916F5D1B6BDE810098F38E /* MacTestApp.app */,
+				55916F6F1B6BDE820098F38E /* MacTestAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,11 +315,16 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				55916F141B6BDBE70098F38E /* Giraffe-OSX */,
+				55916F211B6BDBE70098F38E /* Giraffe-OSXTests */,
+				55916F5E1B6BDE820098F38E /* MacTestApp */,
+				55916F721B6BDE820098F38E /* MacTestAppTests */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
@@ -202,6 +354,82 @@
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55916F141B6BDBE70098F38E /* Giraffe-OSX */ = {
+			isa = PBXGroup;
+			children = (
+				55916F171B6BDBE70098F38E /* Giraffe.h */,
+				55916F151B6BDBE70098F38E /* Supporting Files */,
+			);
+			path = "Giraffe-OSX";
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		55916F151B6BDBE70098F38E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55916F161B6BDBE70098F38E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55916F211B6BDBE70098F38E /* Giraffe-OSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				55916F241B6BDBE70098F38E /* Giraffe_OSXTests.m */,
+				55916F221B6BDBE70098F38E /* Supporting Files */,
+			);
+			path = "Giraffe-OSXTests";
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		55916F221B6BDBE70098F38E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55916F231B6BDBE70098F38E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55916F5E1B6BDE820098F38E /* MacTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				55916F611B6BDE820098F38E /* AppDelegate.h */,
+				55916F621B6BDE820098F38E /* AppDelegate.m */,
+				55916F661B6BDE820098F38E /* Images.xcassets */,
+				55916F681B6BDE820098F38E /* MainMenu.xib */,
+				55916F5F1B6BDE820098F38E /* Supporting Files */,
+			);
+			path = MacTestApp;
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		55916F5F1B6BDE820098F38E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55916F601B6BDE820098F38E /* Info.plist */,
+				55916F641B6BDE820098F38E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55916F721B6BDE820098F38E /* MacTestAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				55916F751B6BDE820098F38E /* MacTestAppTests.m */,
+				55916F731B6BDE820098F38E /* Supporting Files */,
+			);
+			path = MacTestAppTests;
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		55916F731B6BDE820098F38E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55916F741B6BDE820098F38E /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		FA9A0B86146572210095DA13 /* ANGif */ = {
@@ -351,6 +579,42 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		55916F101B6BDBE70098F38E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55916F2F1B6BDC070098F38E /* ANGifGraphicControlExt.h in Headers */,
+				55916F301B6BDC0B0098F38E /* ANGifLogicalScreenDesc.h in Headers */,
+				55916F381B6BDC350098F38E /* ANMutableColorArray.h in Headers */,
+				55916F471B6BDD770098F38E /* OSCommonImage.h in Headers */,
+				55916F181B6BDBE70098F38E /* Giraffe.h in Headers */,
+				55916F2C1B6BDBFB0098F38E /* ANGifEncoder.h in Headers */,
+				55916F491B6BDD770098F38E /* UIImage+ANImageBitmapRep.h in Headers */,
+				55916F341B6BDC280098F38E /* ANColorTable.h in Headers */,
+				55916F3A1B6BDC430098F38E /* ANGifDataSubblock.h in Headers */,
+				55916F3E1B6BDC430098F38E /* ANGifImageFrame.h in Headers */,
+				55916F821B6BDF410098F38E /* ANGifAppExtension.h in Headers */,
+				55916F511B6BDD800098F38E /* BitmapCropManipulator.h in Headers */,
+				55916F4F1B6BDD800098F38E /* BitmapContextManipulator.h in Headers */,
+				55916F401B6BDC430098F38E /* ANGifImageFramePixelSource.h in Headers */,
+				55916F4D1B6BDD7B0098F38E /* CGImageContainer.h in Headers */,
+				55916F531B6BDD800098F38E /* BitmapRotationManipulator.h in Headers */,
+				55916F551B6BDD800098F38E /* BitmapScaleManipulator.h in Headers */,
+				55916F841B6BDF570098F38E /* ANGifNetscapeAppExtension.h in Headers */,
+				55916F321B6BDC280098F38E /* ANAvgColorTable.h in Headers */,
+				55916F571B6BDDD40098F38E /* BitmapContextRep.h in Headers */,
+				55916F431B6BDD430098F38E /* ANImageBitmapRep.h in Headers */,
+				55916F361B6BDC350098F38E /* ANCutColorTable.h in Headers */,
+				55916F411B6BDC4C0098F38E /* LZWSpoof.h in Headers */,
+				55916F4B1B6BDD7B0098F38E /* CGContextCreator.h in Headers */,
+				55916F451B6BDD770098F38E /* NSImage+ANImageBitmapRep.h in Headers */,
+				55916F3C1B6BDC430098F38E /* ANGifImageDescriptor.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		1D6058900D05DD3D006BFB54 /* Giraffe */ = {
 			isa = PBXNativeTarget;
@@ -369,13 +633,104 @@
 			productReference = 1D6058910D05DD3D006BFB54 /* Giraffe.app */;
 			productType = "com.apple.product-type.application";
 		};
+		55916F121B6BDBE70098F38E /* Giraffe-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55916F2A1B6BDBE70098F38E /* Build configuration list for PBXNativeTarget "Giraffe-OSX" */;
+			buildPhases = (
+				55916F0E1B6BDBE70098F38E /* Sources */,
+				55916F0F1B6BDBE70098F38E /* Frameworks */,
+				55916F101B6BDBE70098F38E /* Headers */,
+				55916F111B6BDBE70098F38E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Giraffe-OSX";
+			productName = "Giraffe-OSX";
+			productReference = 55916F131B6BDBE70098F38E /* Giraffe.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		55916F1C1B6BDBE70098F38E /* Giraffe-OSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55916F2B1B6BDBE70098F38E /* Build configuration list for PBXNativeTarget "Giraffe-OSXTests" */;
+			buildPhases = (
+				55916F191B6BDBE70098F38E /* Sources */,
+				55916F1A1B6BDBE70098F38E /* Frameworks */,
+				55916F1B1B6BDBE70098F38E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55916F201B6BDBE70098F38E /* PBXTargetDependency */,
+			);
+			name = "Giraffe-OSXTests";
+			productName = "Giraffe-OSXTests";
+			productReference = 55916F1D1B6BDBE70098F38E /* Giraffe-OSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		55916F5C1B6BDE810098F38E /* MacTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55916F771B6BDE820098F38E /* Build configuration list for PBXNativeTarget "MacTestApp" */;
+			buildPhases = (
+				55916F591B6BDE810098F38E /* Sources */,
+				55916F5A1B6BDE810098F38E /* Frameworks */,
+				55916F5B1B6BDE810098F38E /* Resources */,
+				55916F811B6BDE9A0098F38E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55916F801B6BDE9A0098F38E /* PBXTargetDependency */,
+			);
+			name = MacTestApp;
+			productName = MacTestApp;
+			productReference = 55916F5D1B6BDE810098F38E /* MacTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55916F6E1B6BDE820098F38E /* MacTestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55916F7A1B6BDE820098F38E /* Build configuration list for PBXNativeTarget "MacTestAppTests" */;
+			buildPhases = (
+				55916F6B1B6BDE820098F38E /* Sources */,
+				55916F6C1B6BDE820098F38E /* Frameworks */,
+				55916F6D1B6BDE820098F38E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55916F711B6BDE820098F38E /* PBXTargetDependency */,
+			);
+			name = MacTestAppTests;
+			productName = MacTestAppTests;
+			productReference = 55916F6F1B6BDE820098F38E /* MacTestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				TargetAttributes = {
+					55916F121B6BDBE70098F38E = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					55916F1C1B6BDBE70098F38E = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					55916F5C1B6BDE810098F38E = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					55916F6E1B6BDE820098F38E = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 55916F5C1B6BDE810098F38E;
+					};
+				};
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Giraffe" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -383,12 +738,17 @@
 				Japanese,
 				French,
 				German,
+				Base,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* Giraffe */,
+				55916F121B6BDBE70098F38E /* Giraffe-OSX */,
+				55916F1C1B6BDBE70098F38E /* Giraffe-OSXTests */,
+				55916F5C1B6BDE810098F38E /* MacTestApp */,
+				55916F6E1B6BDE820098F38E /* MacTestAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -400,6 +760,36 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* GiraffeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55916F111B6BDBE70098F38E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55916F1B1B6BDBE70098F38E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55916F5B1B6BDE810098F38E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55916F671B6BDE820098F38E /* Images.xcassets in Resources */,
+				55916F6A1B6BDE820098F38E /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55916F6D1B6BDE820098F38E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,13 +834,99 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		55916F0E1B6BDBE70098F38E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55916F581B6BDDD40098F38E /* BitmapContextRep.m in Sources */,
+				55916F371B6BDC350098F38E /* ANCutColorTable.m in Sources */,
+				55916F331B6BDC280098F38E /* ANAvgColorTable.m in Sources */,
+				55916F3B1B6BDC430098F38E /* ANGifDataSubblock.m in Sources */,
+				55916F541B6BDD800098F38E /* BitmapRotationManipulator.m in Sources */,
+				55916F501B6BDD800098F38E /* BitmapContextManipulator.m in Sources */,
+				55916F461B6BDD770098F38E /* NSImage+ANImageBitmapRep.m in Sources */,
+				55916F421B6BDC4C0098F38E /* LZWSpoof.m in Sources */,
+				55916F391B6BDC350098F38E /* ANMutableColorArray.m in Sources */,
+				55916F561B6BDD800098F38E /* BitmapScaleManipulator.m in Sources */,
+				55916F311B6BDC0F0098F38E /* ANGifLogicalScreenDesc.m in Sources */,
+				55916F2E1B6BDC040098F38E /* ANGifGraphicControlExt.m in Sources */,
+				55916F851B6BDF5B0098F38E /* ANGifNetscapeAppExtension.m in Sources */,
+				55916F481B6BDD770098F38E /* OSCommonImage.m in Sources */,
+				55916F521B6BDD800098F38E /* BitmapCropManipulator.m in Sources */,
+				55916F351B6BDC280098F38E /* ANColorTable.m in Sources */,
+				55916F3F1B6BDC430098F38E /* ANGifImageFrame.m in Sources */,
+				55916F4A1B6BDD770098F38E /* UIImage+ANImageBitmapRep.m in Sources */,
+				55916F4C1B6BDD7B0098F38E /* CGContextCreator.m in Sources */,
+				55916F2D1B6BDBFF0098F38E /* ANGifEncoder.m in Sources */,
+				55916F3D1B6BDC430098F38E /* ANGifImageDescriptor.m in Sources */,
+				55916F441B6BDD430098F38E /* ANImageBitmapRep.m in Sources */,
+				55916F831B6BDF4B0098F38E /* ANGifAppExtension.m in Sources */,
+				55916F4E1B6BDD7B0098F38E /* CGImageContainer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55916F191B6BDBE70098F38E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55916F251B6BDBE70098F38E /* Giraffe_OSXTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55916F591B6BDE810098F38E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55916F651B6BDE820098F38E /* main.m in Sources */,
+				55916F631B6BDE820098F38E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55916F6B1B6BDE820098F38E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55916F761B6BDE820098F38E /* MacTestAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55916F201B6BDBE70098F38E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55916F121B6BDBE70098F38E /* Giraffe-OSX */;
+			targetProxy = 55916F1F1B6BDBE70098F38E /* PBXContainerItemProxy */;
+		};
+		55916F711B6BDE820098F38E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55916F5C1B6BDE810098F38E /* MacTestApp */;
+			targetProxy = 55916F701B6BDE820098F38E /* PBXContainerItemProxy */;
+		};
+		55916F801B6BDE9A0098F38E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55916F121B6BDBE70098F38E /* Giraffe-OSX */;
+			targetProxy = 55916F7F1B6BDE9A0098F38E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55916F681B6BDE820098F38E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55916F691B6BDE820098F38E /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -466,6 +942,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Giraffe_Prefix.pch;
@@ -476,15 +953,390 @@
 			};
 			name = Release;
 		};
+		55916F261B6BDBE70098F38E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "Giraffe-OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Giraffe;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		55916F271B6BDBE70098F38E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "Giraffe-OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Giraffe;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		55916F281B6BDBE70098F38E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "Giraffe-OSXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		55916F291B6BDBE70098F38E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "Giraffe-OSXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		55916F781B6BDE820098F38E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = MacTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		55916F791B6BDE820098F38E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = MacTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		55916F7B1B6BDE820098F38E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = MacTestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacTestApp.app/Contents/MacOS/MacTestApp";
+			};
+			name = Debug;
+		};
+		55916F7C1B6BDE820098F38E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = MacTestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacTestApp.app/Contents/MacOS/MacTestApp";
+			};
+			name = Release;
+		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -492,13 +1344,13 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -514,6 +1366,38 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		55916F2A1B6BDBE70098F38E /* Build configuration list for PBXNativeTarget "Giraffe-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55916F261B6BDBE70098F38E /* Debug */,
+				55916F271B6BDBE70098F38E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		55916F2B1B6BDBE70098F38E /* Build configuration list for PBXNativeTarget "Giraffe-OSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55916F281B6BDBE70098F38E /* Debug */,
+				55916F291B6BDBE70098F38E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		55916F771B6BDE820098F38E /* Build configuration list for PBXNativeTarget "MacTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55916F781B6BDE820098F38E /* Debug */,
+				55916F791B6BDE820098F38E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		55916F7A1B6BDE820098F38E /* Build configuration list for PBXNativeTarget "MacTestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55916F7B1B6BDE820098F38E /* Debug */,
+				55916F7C1B6BDE820098F38E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Giraffe" */ = {
 			isa = XCConfigurationList;

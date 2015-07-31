@@ -18,11 +18,7 @@
 }
 
 + (UIImagePixelSource *)pixelSourceWithImage:(UIImage *)anImage {
-#if __has_feature(objc_arc)
 	return [[UIImagePixelSource alloc] initWithImage:anImage];
-#else
-	return [[[UIImagePixelSource alloc] initWithImage:anImage] autorelease];
-#endif
 }
 
 - (NSUInteger)pixelsWide {
@@ -44,12 +40,5 @@
 - (BOOL)hasTransparency {
 	return YES;
 }
-
-#if !__has_feature(objc_arc)
-- (void)dealloc {
-	[imageRep release];
-	[super dealloc];
-}
-#endif
 
 @end

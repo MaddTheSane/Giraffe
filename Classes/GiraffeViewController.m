@@ -92,14 +92,8 @@
 		[compose addAttachmentData:attachmentData mimeType:@"image/gif" fileName:@"image.gif"];
 		[compose setMailComposeDelegate:self];
 		[self performSelector:@selector(showViewController:) withObject:compose afterDelay:1];
-#if !__has_feature(objc_arc)
-		[compose release];
-#endif
 		[self dismissModalViewControllerAnimated:YES];
 	}];
-#if !__has_feature(objc_arc)
-	[export release];
-#endif
 }
 
 - (void)showViewController:(UIViewController *)controller {
@@ -145,9 +139,6 @@
 	UITableViewCell * imageCell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 	if (!imageCell) {
 		imageCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-#if !__has_feature(objc_arc)
-		[imageCell autorelease];
-#endif
 	}
 	imageCell.imageView.image = [[imageFrames objectAtIndex:indexPath.row] image];
 	imageCell.imageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -184,9 +175,6 @@
 	PhotoEntry * entry = [[PhotoEntry alloc] initWithName:[NSString stringWithFormat:@"Image %d", ++itemID]
 													image:[info objectForKey:UIImagePickerControllerOriginalImage]];
 	[imageFrames addObject:entry];
-#if !__has_feature(objc_arc)
-	[entry release];
-#endif
 	[tableView reloadData];
 	[self dismissModalViewControllerAnimated:YES];
 }
@@ -202,13 +190,5 @@
 }
 
 #pragma mark - Memory Management -
-
-#if !__has_feature(objc_arc)
-- (void)dealloc {
-	[imageFrames release];
-	[imagePicker release];
-    [super dealloc];
-}
-#endif
 
 @end

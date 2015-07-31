@@ -11,7 +11,7 @@
 
 @implementation ANGifImageDescriptor
 
-- (id)initWithImageFrame:(ANGifImageFrame *)anImage {
+- (instancetype)initWithImageFrame:(ANGifImageFrame *)anImage {
 	if ((self = [super init])) {
 		imageFrame = anImage;
 	}

@@ -31,23 +31,14 @@
 
 - (id)initWithImages:(NSArray *)imageArray {
 	if ((self = [super init])) {
-#if __has_feature(objc_arc)
 		images = imageArray;
-#else
-		images = [imageArray retain];
-#endif
 		self.view.backgroundColor = [UIColor whiteColor];
 	}
 	return self;
 }
 
 - (void)encodeToFile:(NSString *)fileName callback:(void (^)(NSString * file))callback {
-#if __has_feature(objc_arc)
 	doneCallback = callback;
-#else
-	if (doneCallback) Block_release(doneCallback);
-	doneCallback = Block_copy(callback);
-#endif
 	[NSThread detachNewThreadSelector:@selector(exportThread:) toTarget:self withObject:fileName];
 }
 
@@ -105,9 +96,6 @@
 		ANGifEncoder * encoder = [[ANGifEncoder alloc] initWithOutputFile:fileOutput size:canvasSize globalColorTable:nil];
 		ANGifNetscapeAppExtension * extension = [[ANGifNetscapeAppExtension alloc] init];
 		[encoder addApplicationExtension:extension];
-#if !__has_feature(objc_arc)
-		[extension release];
-#endif
 		[self setProgressLabel:@"Writing frames ..."];
 		[self setProgressPercent:[NSNumber numberWithFloat:0.1]];
 		float numberOfFrames = (float)[images count];
@@ -121,10 +109,9 @@
 			[encoder addImageFrame:theFrame];
 		}
 		[encoder closeFile];
-#if !__has_feature(objc_arc)
-		[encoder release];
-#endif
-		[self performSelectorOnMainThread:@selector(informCallbackDone:) withObject:fileOutput waitUntilDone:NO];
+		dispatch_async(dispatch_get_main_queue(), ^{
+			[self informCallbackDone:fileOutput];
+		});
 	}
 }
 
@@ -137,11 +124,6 @@
 	UIImagePixelSource * pixelSource = [[UIImagePixelSource alloc] initWithImage:scaledImage];
 	ANCutColorTable * colorTable = [[ANCutColorTable alloc] initWithTransparentFirst:YES pixelSource:pixelSource];
 	ANGifImageFrame * frame = [[ANGifImageFrame alloc] initWithPixelSource:pixelSource colorTable:colorTable delayTime:1];
-#if !__has_feature(objc_arc)
-	[colorTable release];
-	[pixelSource release];
-	[frame autorelease];
-#endif
 	return frame;
 }
 
@@ -170,17 +152,5 @@
 }
 
 #pragma mark - Memory Management -
-
-#if !__has_feature(objc_arc)
-
-- (void)dealloc {
-	[images release];
-	[progressView release];
-	[progressStatus release];
-	if (doneCallback) Block_release(doneCallback);
-	[super dealloc];
-}
-
-#endif
 
 @end

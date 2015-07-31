@@ -30,7 +30,7 @@
  * will be used for this image.
  * @param delay The delay in seconds before the next frame will be shown. This is accurate to the millisecond.
  */
-- (id)initWithPixelSource:(id<ANGifImageFramePixelSource>)aSource colorTable:(ANColorTable *)table delayTime:(NSTimeInterval)delay;
+- (instancetype)initWithPixelSource:(id<ANGifImageFramePixelSource>)aSource colorTable:(ANColorTable *)table delayTime:(NSTimeInterval)delay NS_DESIGNATED_INITIALIZER;
 
 /**
  * Create an ANGifImageFrame with an image source and a delay.
@@ -39,7 +39,7 @@
  * @discussion Despite the fact that no color table was provided, the encoder may chose to use
  * a local color table if no global color table has been created.
  */
-- (id)initWithPixelSource:(id<ANGifImageFramePixelSource>)aSource delayTime:(NSTimeInterval)delay;
+- (instancetype)initWithPixelSource:(id<ANGifImageFramePixelSource>)aSource delayTime:(NSTimeInterval)delay;
 
 /**
  * Encodes each pixel using the specified color table, adding colors as it goes along.

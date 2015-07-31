@@ -14,7 +14,7 @@
 
 + (NSArray *)dataSubblocksForData:(NSData *)largeData;
 
-- (id)initWithBlockData:(NSData *)theData;
+- (instancetype)initWithBlockData:(NSData *)theData NS_DESIGNATED_INITIALIZER;
 - (NSData *)encodeBlock;
 - (void)writeToFileHandle:(NSFileHandle *)fileHandle;
 

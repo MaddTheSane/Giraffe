@@ -13,18 +13,9 @@
 - (void)swapValueAtIndex:(NSInteger)source withValueAtIndex:(NSInteger)destination {
 	NSObject * object1 = [self objectAtIndex:source];
 	NSObject * object2 = [self objectAtIndex:destination];
-#if !__has_feature(objc_arc)
-	[object1 retain];
-	[object2 retain];
-#endif
 	
 	[self replaceObjectAtIndex:source withObject:object2];
 	[self replaceObjectAtIndex:destination withObject:object1];
-	
-#if !__has_feature(objc_arc)
-	[object1 release];
-	[object2 release];
-#endif
 }
 
 @end

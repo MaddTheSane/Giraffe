@@ -40,14 +40,14 @@ BMPoint BMPointFromPoint (CGPoint point);
  * Creates a bitmap context with pixels and dimensions from an image.
  * @param image The image to wrap in a bitmap context.
  */
-- (id)initWithImage:(ANImageObj *)image;
+- (instancetype)initWithImage:(ANImageObj *)image;
 
 /**
  * Creates a blank bitmap context with specified dimensions.
  * @param sizePoint The size to use for the new bitmap.  The x value
  * of this is used for the width, and the y value is used for height.
  */
-- (id)initWithSize:(BMPoint)sizePoint;
+- (instancetype)initWithSize:(BMPoint)sizePoint;
 
 /**
  * Returns the bitmap context underlying the image.
@@ -64,7 +64,7 @@ BMPoint BMPointFromPoint (CGPoint point);
 /**
  * Returns the current size of the bitmap.
  */
-- (BMPoint)bitmapSize;
+@property (readonly) BMPoint bitmapSize;
 
 /**
  * Tells the BitmapContext that a new image should be generated when

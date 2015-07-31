@@ -7,6 +7,7 @@
 //
 
 #import "BitmapRotationManipulator.h"
+#include <tgmath.h>
 
 #define DEGTORAD(x) (x * (M_PI / 180.0f))
 
@@ -104,11 +105,11 @@ static CGPoint locationForAngle (CGFloat angle, CGFloat hypotenuse) {
 	CGPoint maxP = CGPointMake(CGFLOAT_MIN, CGFLOAT_MIN);
 	
 	/* Find the angle for the corners. */
-	float firstAngle = (float)atan2((double)size.height / 2.0, (double)size.width / 2.0);
-	float secondAngle = (float)atan2((double)size.height / 2.0, (double)size.width / -2.0);
-	float thirdAngle = (float)atan2((double)size.height / -2.0, (double)size.width / -2.0);
-	float fourthAngle = (float)atan2((double)size.height / -2.0, (double)size.width / 2.0);
-	float angles[4] = {firstAngle, secondAngle, thirdAngle, fourthAngle};
+	CGFloat firstAngle = (CGFloat)atan2((double)size.height / 2.0, (double)size.width / 2.0);
+	CGFloat secondAngle = (CGFloat)atan2((double)size.height / 2.0, (double)size.width / -2.0);
+	CGFloat thirdAngle = (CGFloat)atan2((double)size.height / -2.0, (double)size.width / -2.0);
+	CGFloat fourthAngle = (CGFloat)atan2((double)size.height / -2.0, (double)size.width / 2.0);
+	CGFloat angles[4] = {firstAngle, secondAngle, thirdAngle, fourthAngle};
 	
 	/* Rotate the corners by the new degrees, finding out how outgoing
 	   the corners will be.  This will allow us to easily calculate
@@ -116,7 +117,7 @@ static CGPoint locationForAngle (CGFloat angle, CGFloat hypotenuse) {
 	 */
 	for (int i = 0; i < 4; i++) {
 		// conver the angle to radians.
-		float deg = angles[i] * (float)(180.0f / M_PI);
+		CGFloat deg = angles[i] * (CGFloat)(180.0f / M_PI);
 		CGPoint p1 = locationForAngle(deg + degrees, hypotenuse);
 		if (p1.x < minP.x) minP.x = p1.x;
 		if (p1.x > maxP.x) maxP.x = p1.x;
@@ -133,17 +134,17 @@ static CGPoint locationForAngle (CGFloat angle, CGFloat hypotenuse) {
 	hypotenuse = (CGFloat)sqrt((pow(newSize.width / 2.0, 2) + pow(newSize.height / 2.0, 2)));
 	
 	CGPoint newCenter;
-	float addAngle = (float)atan2((double)newSize.height / 2, (double)newSize.width / 2) * (float)(180.0f / M_PI);
-	newCenter.x = cos((float)DEGTORAD((degrees + addAngle))) * hypotenuse;
-	newCenter.y = sin((float)DEGTORAD((degrees + addAngle))) * hypotenuse;
+	CGFloat addAngle = (CGFloat)atan2((double)newSize.height / 2, (double)newSize.width / 2) * (float)(180.0f / M_PI);
+	newCenter.x = cos((CGFloat)DEGTORAD((degrees + addAngle))) * hypotenuse;
+	newCenter.y = sin((CGFloat)DEGTORAD((degrees + addAngle))) * hypotenuse;
 	
 	CGPoint offsetCenter;
-	offsetCenter.x = (float)((float)newSize.width / 2.0f) - (float)newCenter.x;
-	offsetCenter.y = (float)((float)newSize.height / 2.0f) - (float)newCenter.y;
+	offsetCenter.x = (CGFloat)((CGFloat)newSize.width / 2.0f) - (CGFloat)newCenter.x;
+	offsetCenter.y = (CGFloat)((CGFloat)newSize.height / 2.0f) - (CGFloat)newCenter.y;
 	
 	CGContextRef newContext = [CGContextCreator newARGBBitmapContextWithSize:newSize];
 	CGContextSaveGState(newContext);
-	CGContextTranslateCTM(newContext, (float)round((float)offsetCenter.x), (float)round((float)offsetCenter.y));
+	CGContextTranslateCTM(newContext, (CGFloat)round((CGFloat)offsetCenter.x), (CGFloat)round((CGFloat)offsetCenter.y));
 	
 	CGContextRotateCTM(newContext, (CGFloat)DEGTORAD(degrees));
 	CGRect drawRect;
@@ -157,15 +158,7 @@ static CGPoint locationForAngle (CGFloat angle, CGFloat hypotenuse) {
 	void * buff = CGBitmapContextGetData(newContext);
 	CGContextRelease(newContext);
 	free(buff);
-#if __has_feature(objc_arc) == 1
-	id retainedImage = CGImageReturnAutoreleased(image);
-	CGImageRelease(image);
-	return (__bridge CGImageRef)retainedImage;
-#else
-	CGImageContainer * container = [CGImageContainer imageContainerWithImage:image];
-	CGImageRelease(image);
-	return [container image];
-#endif
+	return (CGImageRef)CFAutorelease(image);
 }
 
 @end

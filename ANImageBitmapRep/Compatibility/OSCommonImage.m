@@ -13,21 +13,9 @@ CGImageRef CGImageFromANImage (ANImageObj * anImageObj) {
 	return [anImageObj CGImage];
 #elif TARGET_OS_MAC
 	CGImageSourceRef source;
-#if __has_feature(objc_arc) == 1
 	source = CGImageSourceCreateWithData((__bridge CFDataRef)[anImageObj TIFFRepresentation], NULL);
-#else
-	source = CGImageSourceCreateWithData((CFDataRef)[anImageObj TIFFRepresentation], NULL);
-#endif
 	CGImageRef maskRef = CGImageSourceCreateImageAtIndex(source, 0, NULL);
-#if __has_feature(objc_arc) == 1
-	CGImageRef autoreleased = (__bridge CGImageRef)CGImageReturnAutoreleased(maskRef);
-	CGImageRelease(maskRef);
-	return autoreleased;
-#else
-	CGImageContainer * container = [CGImageContainer imageContainerWithImage:maskRef];
-	CGImageRelease(maskRef);
-	return [container image];
-#endif
+	return (CGImageRef)CFAutorelease(maskRef);
 #endif
 }
 
@@ -36,10 +24,6 @@ ANImageObj * ANImageFromCGImage (CGImageRef imageRef) {
 	return [UIImage imageWithCGImage:imageRef];
 #elif TARGET_OS_MAC
 	NSImage * image = [[NSImage alloc] initWithCGImage:imageRef size:NSZeroSize];
-#if __has_feature(objc_arc) == 1
 	return image;
-#else
-	return [image autorelease];
-#endif
 #endif
 }

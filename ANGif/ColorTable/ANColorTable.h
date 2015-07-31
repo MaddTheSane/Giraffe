@@ -38,13 +38,13 @@ typedef struct {
 @property (readwrite) NSUInteger maxColors;
 @property (readonly) BOOL hasTransparentFirst;
 
-- (id)initWithTransparentFirst:(BOOL)transparentFirst;
+- (instancetype)initWithTransparentFirst:(BOOL)transparentFirst;
 
-- (NSUInteger)numberOfEntries;
+@property (NS_NONATOMIC_IOSONLY, readonly) NSUInteger numberOfEntries;
 - (void)setColor:(ANGifColor)color atIndex:(UInt8)index;
 - (UInt8)addColor:(ANGifColor)aColor;
 - (ANGifColor)colorAtIndex:(UInt8)index;
-- (UInt8)transparentIndex;
+@property (NS_NONATOMIC_IOSONLY, readonly) UInt8 transparentIndex;
 
 - (void)sortByPriority;
 - (BOOL)singleSortStep;
@@ -53,7 +53,7 @@ typedef struct {
  * Returns a value x where 2^(x + 1) is the number (or more than the number)
  * of entries in this color table.
  */
-- (UInt8)colorTableSizeValue;
+@property (NS_NONATOMIC_IOSONLY, readonly) UInt8 colorTableSizeValue;
 - (NSData *)encodeRawColorTable;
 - (NSData *)encodeRawColorTableCount:(NSUInteger)numEntries;
 

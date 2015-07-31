@@ -38,7 +38,7 @@ NSColor * NSColorFromBMPixel (BMPixel pixel) {
 - (void)forwardInvocation:(NSInvocation *)anInvocation {
 	if (!baseClasses) [self generateBaseClasses];
 	for (int i = 0; i < [baseClasses count]; i++) {
-		BitmapContextManipulator * manip = [baseClasses objectAtIndex:i];
+		BitmapContextManipulator * manip = baseClasses[i];
 		if ([manip respondsToSelector:[anInvocation selector]]) {
 			[anInvocation invokeWithTarget:manip];
 			return;
@@ -47,7 +47,6 @@ NSColor * NSColorFromBMPixel (BMPixel pixel) {
 	[self doesNotRecognizeSelector:[anInvocation selector]];
 }
 
-#if __has_feature(objc_arc) == 1
 + (ANImageBitmapRep *)imageBitmapRepWithCGSize:(CGSize)avgSize {
 	return [[ANImageBitmapRep alloc] initWithSize:BMPointMake(round(avgSize.width), round(avgSize.height))];
 }
@@ -55,15 +54,6 @@ NSColor * NSColorFromBMPixel (BMPixel pixel) {
 + (ANImageBitmapRep *)imageBitmapRepWithImage:(ANImageObj *)anImage {
 	return [[ANImageBitmapRep alloc] initWithImage:anImage];
 }
-#else
-+ (ANImageBitmapRep *)imageBitmapRepWithCGSize:(CGSize)avgSize {
-	return [[[ANImageBitmapRep alloc] initWithSize:BMPointMake(round(avgSize.width), round(avgSize.height))] autorelease];
-}
-
-+ (ANImageBitmapRep *)imageBitmapRepWithImage:(ANImageObj *)anImage {
-	return [[[ANImageBitmapRep alloc] initWithImage:anImage] autorelease];
-}
-#endif
 
 - (void)invertColors {
 	UInt8 pixel[4];
@@ -134,25 +124,13 @@ NSColor * NSColorFromBMPixel (BMPixel pixel) {
 	return ANImageFromCGImage([self CGImage]);
 }
 
-#if __has_feature(objc_arc) != 1
-- (void)dealloc {
-	[baseClasses release];
-	[super dealloc];
-}
-#endif
-
 #pragma mark Base Classes
 
 - (void)generateBaseClasses {
 	BitmapCropManipulator * croppable = [[BitmapCropManipulator alloc] initWithContext:self];
 	BitmapScaleManipulator * scalable = [[BitmapScaleManipulator alloc] initWithContext:self];
 	BitmapRotationManipulator * rotatable = [[BitmapRotationManipulator alloc] initWithContext:self];
-	baseClasses = [[NSArray alloc] initWithObjects:croppable, scalable, rotatable, nil];
-#if __has_feature(objc_arc) != 1
-	[rotatable release];
-	[scalable release];
-	[croppable release];
-#endif
+	baseClasses = @[croppable, scalable, rotatable];
 }
 
 #pragma mark NSCopying

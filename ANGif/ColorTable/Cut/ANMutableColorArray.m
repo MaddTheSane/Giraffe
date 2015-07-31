@@ -103,11 +103,7 @@ int CompareColorQSort (const void * ent1, const void * ent2);
 		
 		startIndex += size;
 	}
-#if __has_feature(objc_arc)
 	return newArray;
-#else
-	return [newArray autorelease];
-#endif
 }
 
 - (void)removeDuplicates {
