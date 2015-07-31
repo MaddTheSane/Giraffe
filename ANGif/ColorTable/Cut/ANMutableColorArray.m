@@ -10,9 +10,10 @@
 #import "ANMutableColorArray.h"
 #define kColorBufferSize 256
 
-int CompareColorQSort (const void * ent1, const void * ent2);
+static int CompareColorQSort (const void * ent1, const void * ent2);
 
 @implementation ANMutableColorArray
+@synthesize count = _entryCount;
 
 - (id)init {
 	if ((self = [super init])) {
@@ -20,10 +21,6 @@ int CompareColorQSort (const void * ent1, const void * ent2);
 		_totalAlloced = kColorBufferSize;
 	}
 	return self;
-}
-
-- (NSUInteger)count {
-	return _entryCount;
 }
 
 - (void)addColor:(ANGifColor)color {
@@ -152,9 +149,6 @@ int CompareColorQSort (const void * ent1, const void * ent2);
 
 - (void)dealloc {
 	free(_colors);
-#if !__has_feature(objc_arc)
-	[super dealloc];
-#endif
 }
 
 @end

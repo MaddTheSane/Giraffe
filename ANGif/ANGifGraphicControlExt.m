@@ -17,7 +17,7 @@
 @synthesize delayTime;
 
 - (NSData *)encodeBlock {
-	NSMutableData * encoded = [NSMutableData data];
+	NSMutableData * encoded = [[NSMutableData alloc] init];
 	UInt8 aByte = 0x21;
 	UInt16 doubleByte;
 	

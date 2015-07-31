@@ -18,6 +18,8 @@
 #define kGifHeader "GIF89a"
 #define kGifTrailer "\x3B"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ANGifEncoder : NSObject {
 	NSFileHandle * fileHandle;
 	ANColorTable * globalColorTable;
@@ -67,3 +69,5 @@
 - (void)closeFile;
 
 @end
+
+NS_ASSUME_NONNULL_END

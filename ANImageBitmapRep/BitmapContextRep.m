@@ -8,6 +8,8 @@
 
 #import "BitmapContextRep.h"
 
+#undef BMPointMake
+
 BMPoint BMPointMake (long x, long y) {
 	BMPoint p;
 	p.x = x;
@@ -101,8 +103,7 @@ BMPoint BMPointFromPoint (CGPoint point) {
 		lastImage = CGBitmapContextCreateImage(context);
 		needsUpdate = NO;
 	}
-	CGImageRetain(lastImage);
-	return (CGImageRef)CFAutorelease(lastImage);
+	return lastImage;
 }
 
 - (void)dealloc {

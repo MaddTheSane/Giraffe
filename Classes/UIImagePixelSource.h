@@ -14,7 +14,7 @@
 	ANImageBitmapRep * imageRep;
 }
 
-- (id)initWithImage:(UIImage *)anImage;
-+ (UIImagePixelSource *)pixelSourceWithImage:(UIImage *)anImage;
+- (instancetype)initWithImage:(UIImage *)anImage;
++ (instancetype)pixelSourceWithImage:(UIImage *)anImage;
 
 @end

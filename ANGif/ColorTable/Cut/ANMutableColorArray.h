@@ -15,7 +15,7 @@
 	NSUInteger _totalAlloced;
 }
 
-- (NSUInteger)count;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSUInteger count;
 - (void)addColor:(ANGifColor)color;
 - (void)removeAtIndex:(NSUInteger)index;
 - (ANGifColor)colorAtIndex:(NSUInteger)index;

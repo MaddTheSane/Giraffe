@@ -19,7 +19,11 @@ typedef UIImage ANImageObj;
 typedef NSImage ANImageObj;
 #endif
 
+NS_ASSUME_NONNULL_BEGIN
+
 CGImageRef CGImageFromANImage (ANImageObj * anImageObj);
-ANImageObj * ANImageFromCGImage (CGImageRef imageRef);
+ANImageObj * __nullable ANImageFromCGImage (CGImageRef imageRef);
+
+NS_ASSUME_NONNULL_END
 
 #endif

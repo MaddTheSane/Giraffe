@@ -19,6 +19,8 @@ typedef struct {
 	CGFloat alpha;
 } BMPixel;
 
+NS_ASSUME_NONNULL_BEGIN
+
 BMPixel BMPixelMake (CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha);
 #if TARGET_OS_IPHONE
 UIColor * UIColorFromBMPixel (BMPixel pixel);
@@ -76,6 +78,8 @@ NSColor * NSColorFromBMPixel (BMPixel pixel);
 /**
  * Creates a new UIImage or NSImage from the bitmap context.
  */
-- (ANImageObj *)image;
+- (nullable ANImageObj *)image;
 
 @end
+
+NS_ASSUME_NONNULL_END

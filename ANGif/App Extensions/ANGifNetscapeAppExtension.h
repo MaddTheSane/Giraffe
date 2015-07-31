@@ -14,6 +14,6 @@
 
 @property (readonly) UInt16 numberOfRepeats;
 
-- (id)initWithRepeatCount:(UInt16)repeats;
+- (instancetype)initWithRepeatCount:(UInt16)repeats;
 
 @end

@@ -7,16 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIImage.h>
 #import "BitmapScaleManipulator.h"
 
-@interface PhotoEntry : NSObject {
-	NSString * imageName;
-	UIImage * image;
-}
+@interface PhotoEntry : NSObject
 
-@property (readonly) UIImage * image;
-@property (readonly) NSString * imageName;
+@property (strong, readonly) UIImage * image;
+@property (strong, readonly) NSString * imageName;
 
-- (id)initWithName:(NSString *)name image:(UIImage *)anImage;
+- (instancetype)initWithName:(NSString *)name image:(UIImage *)anImage;
 
 @end

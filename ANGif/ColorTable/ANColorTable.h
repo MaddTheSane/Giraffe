@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef struct {
 	UInt8 red;
 	UInt8 green;
@@ -38,6 +40,7 @@ typedef struct {
 @property (readwrite) NSUInteger maxColors;
 @property (readonly) BOOL hasTransparentFirst;
 
+- (instancetype)init;
 - (instancetype)initWithTransparentFirst:(BOOL)transparentFirst;
 
 @property (NS_NONATOMIC_IOSONLY, readonly) NSUInteger numberOfEntries;
@@ -58,3 +61,5 @@ typedef struct {
 - (NSData *)encodeRawColorTableCount:(NSUInteger)numEntries;
 
 @end
+
+NS_ASSUME_NONNULL_END

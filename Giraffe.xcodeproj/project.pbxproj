@@ -72,8 +72,10 @@
 		55916F7E1B6BDE9A0098F38E /* Giraffe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 55916F131B6BDBE70098F38E /* Giraffe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		55916F821B6BDF410098F38E /* ANGifAppExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B8E146572210095DA13 /* ANGifAppExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55916F831B6BDF4B0098F38E /* ANGifAppExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B8F146572210095DA13 /* ANGifAppExtension.m */; };
-		55916F841B6BDF570098F38E /* ANGifNetscapeAppExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B90146572210095DA13 /* ANGifNetscapeAppExtension.h */; };
+		55916F841B6BDF570098F38E /* ANGifNetscapeAppExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B90146572210095DA13 /* ANGifNetscapeAppExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55916F851B6BDF5B0098F38E /* ANGifNetscapeAppExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B91146572210095DA13 /* ANGifNetscapeAppExtension.m */; };
+		55916F881B6BEA430098F38E /* Giraffe extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55916F871B6BEA430098F38E /* Giraffe extensions.swift */; };
+		55916F8A1B6BED170098F38E /* ColorArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55916F891B6BED170098F38E /* ColorArray.swift */; };
 		FA9A0BA7146572210095DA13 /* ANGifEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B88146572210095DA13 /* ANGifEncoder.m */; };
 		FA9A0BA8146572210095DA13 /* ANGifGraphicControlExt.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B8A146572210095DA13 /* ANGifGraphicControlExt.m */; };
 		FA9A0BA9146572210095DA13 /* ANGifLogicalScreenDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B8C146572210095DA13 /* ANGifLogicalScreenDesc.m */; };
@@ -172,6 +174,9 @@
 		55916F6F1B6BDE820098F38E /* MacTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55916F741B6BDE820098F38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55916F751B6BDE820098F38E /* MacTestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacTestAppTests.m; sourceTree = "<group>"; };
+		55916F861B6BEA420098F38E /* MacTestApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacTestApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		55916F871B6BEA430098F38E /* Giraffe extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Giraffe extensions.swift"; sourceTree = "<group>"; };
+		55916F891B6BED170098F38E /* ColorArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorArray.swift; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Giraffe-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Giraffe-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		FA9A0B87146572210095DA13 /* ANGifEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANGifEncoder.h; sourceTree = "<group>"; };
 		FA9A0B88146572210095DA13 /* ANGifEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANGifEncoder.m; sourceTree = "<group>"; };
@@ -399,6 +404,8 @@
 				55916F621B6BDE820098F38E /* AppDelegate.m */,
 				55916F661B6BDE820098F38E /* Images.xcassets */,
 				55916F681B6BDE820098F38E /* MainMenu.xib */,
+				55916F871B6BEA430098F38E /* Giraffe extensions.swift */,
+				55916F891B6BED170098F38E /* ColorArray.swift */,
 				55916F5F1B6BDE820098F38E /* Supporting Files */,
 			);
 			path = MacTestApp;
@@ -408,6 +415,7 @@
 		55916F5F1B6BDE820098F38E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				55916F861B6BEA420098F38E /* MacTestApp-Bridging-Header.h */,
 				55916F601B6BDE820098F38E /* Info.plist */,
 				55916F641B6BDE820098F38E /* main.m */,
 			);
@@ -877,6 +885,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55916F881B6BEA430098F38E /* Giraffe extensions.swift in Sources */,
+				55916F8A1B6BED170098F38E /* ColorArray.swift in Sources */,
 				55916F651B6BDE820098F38E /* main.m in Sources */,
 				55916F631B6BDE820098F38E /* AppDelegate.m in Sources */,
 			);
@@ -926,7 +936,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -942,7 +951,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Giraffe_Prefix.pch;
@@ -1190,6 +1198,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "MacTestApp/MacTestApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1230,6 +1240,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "MacTestApp/MacTestApp-Bridging-Header.h";
 			};
 			name = Release;
 		};

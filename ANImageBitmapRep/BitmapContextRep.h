@@ -10,6 +10,8 @@
 #import "CGImageContainer.h"
 #import "CGContextCreator.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  * A structure that defines a point in bitmap space.
  * This is similar to the CGPoint structure, but it
@@ -23,6 +25,14 @@ typedef struct {
 BMPoint BMPointMake (long x, long y);
 BMPoint BMPointFromSize (CGSize size);
 BMPoint BMPointFromPoint (CGPoint point);
+
+static inline BMPoint __BMPointMake (long x, long y) {
+	BMPoint p;
+	p.x = x;
+	p.y = y;
+	return p;
+}
+#define BMPointMake __BMPointMake
 
 /**
  * BitmapContextRep is a concrete subclass of NSObject that provides a basic
@@ -48,6 +58,8 @@ BMPoint BMPointFromPoint (CGPoint point);
  * of this is used for the width, and the y value is used for height.
  */
 - (instancetype)initWithSize:(BMPoint)sizePoint;
+
+@property (NS_NONATOMIC_IOSONLY) CGContextRef context;
 
 /**
  * Returns the bitmap context underlying the image.
@@ -115,3 +127,6 @@ BMPoint BMPointFromPoint (CGPoint point);
 - (CGImageRef)CGImage;
 
 @end
+
+NS_ASSUME_NONNULL_END
+

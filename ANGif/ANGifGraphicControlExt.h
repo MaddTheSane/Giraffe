@@ -22,6 +22,6 @@
 @property (readwrite) UInt8 transparentColorIndex;
 @property (readwrite) NSTimeInterval delayTime;
 
-- (NSData *)encodeBlock;
+- (nonnull NSData *)encodeBlock;
 
 @end

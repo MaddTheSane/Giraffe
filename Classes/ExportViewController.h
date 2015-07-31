@@ -22,7 +22,7 @@
 	void (^doneCallback)(NSString * file);
 }
 
-- (id)initWithImages:(NSArray *)imageArray;
+- (instancetype)initWithImages:(NSArray *)imageArray;
 - (void)encodeToFile:(NSString *)fileName callback:(void (^)(NSString * file))callback;
 
 @end

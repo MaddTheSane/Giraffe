@@ -17,7 +17,7 @@
     
 }
 
-+ (CGContextRef)newARGBBitmapContextWithSize:(CGSize)size;
-+ (CGContextRef)newARGBBitmapContextWithImage:(CGImageRef)image;
++ (CGContextRef)newARGBBitmapContextWithSize:(CGSize)size CF_RETURNS_RETAINED;
++ (CGContextRef)newARGBBitmapContextWithImage:(CGImageRef)image CF_RETURNS_RETAINED;
 
 @end

@@ -14,6 +14,6 @@
 	BOOL finishedInit;
 }
 
-- (id)initWithTransparentFirst:(BOOL)hasAlpha pixelSource:(id<ANGifImageFramePixelSource>)pixelSource;
+- (instancetype)initWithTransparentFirst:(BOOL)hasAlpha pixelSource:(id<ANGifImageFramePixelSource>)pixelSource;
 
 @end

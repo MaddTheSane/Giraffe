@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#define BitOutOfRangeException @"BitOutOfRangeException"
+NS_ASSUME_NONNULL_BEGIN
 
-void LZWDataAddBit (UInt8 ** _bytePool, NSUInteger * _totalSize, NSUInteger * numBits, BOOL flag);
-BOOL LZWDataGetBit (UInt8 * _bytePool, NSUInteger bitIndex);
+#define BitOutOfRangeException @"BitOutOfRangeException"
 
 @interface LZWSpoof : NSObject {
 	UInt8 * _bytePool;
@@ -24,6 +23,7 @@ BOOL LZWDataGetBit (UInt8 * _bytePool, NSUInteger bitIndex);
 + (NSData *)lzwExpandData:(NSData *)existingData;
 
 - (instancetype)initWithData:(NSData *)initialData NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_DESIGNATED_INITIALIZER;
 - (void)addBit:(BOOL)flag;
 - (BOOL)getBitAtIndex:(NSUInteger)bitIndex;
 
@@ -33,3 +33,5 @@ BOOL LZWDataGetBit (UInt8 * _bytePool, NSUInteger bitIndex);
 - (NSData *)convertToData;
 
 @end
+
+NS_ASSUME_NONNULL_END

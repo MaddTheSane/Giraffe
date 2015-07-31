@@ -13,6 +13,7 @@
 
 @synthesize maxColors;
 @synthesize hasTransparentFirst;
+@synthesize numberOfEntries = _entryCount;
 
 - (instancetype)initWithTransparentFirst:(BOOL)transparentFirst {
 	if ((self = [self init])) {
@@ -33,10 +34,6 @@
 		maxColors = 256;
 	}
 	return self;
-}
-
-- (NSUInteger)numberOfEntries {
-	return _entryCount;
 }
 
 - (void)setColor:(ANGifColor)color atIndex:(UInt8)index {
@@ -128,7 +125,7 @@
 }
 
 - (NSData *)encodeRawColorTableCount:(NSUInteger)numEntries {
-	NSMutableData * encoded = [NSMutableData data];
+	NSMutableData * encoded = [[NSMutableData alloc] init];
 	
 	UInt8 byte;
 	for (NSUInteger i = 0; i < numEntries; i++) {

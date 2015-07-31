@@ -12,14 +12,18 @@
 
 @class ANImageBitmapRep;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSImage (ANImageBitmapRep)
 
-+ (NSImage *)imageFromImageBitmapRep:(ANImageBitmapRep *)ibr;
++ (nullable NSImage *)imageFromImageBitmapRep:(ANImageBitmapRep *)ibr;
 - (ANImageBitmapRep *)imageBitmapRep;
 - (NSImage *)imageByScalingToSize:(CGSize)sz;
 - (NSImage *)imageFittingFrame:(CGSize)sz;
 - (NSImage *)imageFillingFrame:(CGSize)sz;
 
 @end
+
+NS_ASSUME_NONNULL_END
 
 #endif

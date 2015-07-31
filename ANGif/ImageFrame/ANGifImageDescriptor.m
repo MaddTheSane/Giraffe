@@ -19,7 +19,7 @@
 }
 
 - (NSData *)encodeBlock {
-	NSMutableData * encoded = [NSMutableData data];
+	NSMutableData * encoded = [[NSMutableData alloc] init];
 	
 	UInt8 aByte = kImageSeparator;
 	UInt16 doubleByte;

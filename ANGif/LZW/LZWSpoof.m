@@ -9,6 +9,10 @@
 
 #import "LZWSpoof.h"
 
+
+static void LZWDataAddBit (UInt8 ** _bytePool, NSUInteger * _totalSize, NSUInteger * numBits, BOOL flag);
+static BOOL LZWDataGetBit (UInt8 * _bytePool, NSUInteger bitIndex);
+
 #define kAllocBufferSize 512
 
 @implementation LZWSpoof
@@ -50,7 +54,7 @@
 	if ((self = [super init])) {
 		_totalSize = [initialData length];
 		_bytePool = (UInt8 *)malloc(_totalSize);
-		memcpy(_bytePool, (const char *)[initialData bytes], _totalSize);
+		[initialData getBytes:_bytePool length:_totalSize];
 		numBits = _totalSize * 8;
 	}
 	return self;

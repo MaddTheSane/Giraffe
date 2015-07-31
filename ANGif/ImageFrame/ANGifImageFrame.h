@@ -18,8 +18,8 @@
 	NSTimeInterval delayTime;
 }
 
-@property (nonatomic, retain) id<ANGifImageFramePixelSource> pixelSource;
-@property (nonatomic, retain) ANColorTable * localColorTable;
+@property (nonatomic, strong) id<ANGifImageFramePixelSource> pixelSource;
+@property (nonatomic, strong) ANColorTable * localColorTable;
 @property (readwrite) UInt16 offsetX, offsetY;
 @property (readwrite) NSTimeInterval delayTime;
 
