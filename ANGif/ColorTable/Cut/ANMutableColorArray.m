@@ -12,7 +12,10 @@
 
 static int CompareColorQSort (const void * ent1, const void * ent2);
 
-@implementation ANMutableColorArray
+@implementation ANMutableColorArray {
+	ANGifColor * _colors;
+	NSUInteger _totalAlloced;
+}
 @synthesize count = _entryCount;
 
 - (id)init {

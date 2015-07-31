@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ANGifAppExtension : NSObject {
-	NSData * applicationIdentifier;
-	NSData * applicationAuthCode;
-	NSData * applicationData;
-}
+NS_ASSUME_NONNULL_BEGIN
 
-@property (nonatomic, retain) NSData * applicationIdentifier;
-@property (nonatomic, retain) NSData * applicationAuthCode;
-@property (nonatomic, retain) NSData * applicationData;
+@interface ANGifAppExtension : NSObject
+
+@property (nonatomic, copy) NSData * applicationIdentifier;
+@property (nonatomic, copy) NSData * applicationAuthCode;
+@property (nonatomic, copy) NSData * applicationData;
 
 - (NSData *)encodeBlock;
 
 @end
+
+NS_ASSUME_NONNULL_END

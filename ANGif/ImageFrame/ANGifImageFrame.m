@@ -34,7 +34,7 @@
 - (NSData *)encodeImageUsingColorTable:(ANColorTable *)colorTable {
 	NSUInteger color[4];
 	ANGifColor gifColor;
-	NSMutableData * encodedData = [NSMutableData data];
+	NSMutableData * encodedData = [[NSMutableData alloc] init];
 	NSUInteger width = [pixelSource pixelsWide];
 	NSUInteger height = [pixelSource pixelsHigh];
 	

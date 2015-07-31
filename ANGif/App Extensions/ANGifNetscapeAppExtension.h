@@ -8,12 +8,17 @@
 
 #import "ANGifAppExtension.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ANGifNetscapeAppExtension : ANGifAppExtension {
 	UInt16 numberOfRepeats;
 }
 
 @property (readonly) UInt16 numberOfRepeats;
 
-- (instancetype)initWithRepeatCount:(UInt16)repeats;
+- (instancetype)init;
+- (instancetype)initWithRepeatCount:(UInt16)repeats NS_DESIGNATED_INITIALIZER;
 
 @end
+
+NS_ASSUME_NONNULL_END

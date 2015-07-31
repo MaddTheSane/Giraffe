@@ -21,8 +21,11 @@
 	UIProgressView * progressView;
 	void (^doneCallback)(NSString * file);
 }
-
+#ifdef __MAC_10_11
+- (instancetype)initWithImages:(NSArray<UIImage*> *)imageArray;
+#else
 - (instancetype)initWithImages:(NSArray *)imageArray;
+#endif
 - (void)encodeToFile:(NSString *)fileName callback:(void (^)(NSString * file))callback;
 
 @end

@@ -22,6 +22,6 @@
 @property (readwrite) UInt8 gctSize;
 @property (readwrite) UInt8 backgroundColor;
 
-- (NSData *)encodeBlock;
+- (nonnull NSData *)encodeBlock;
 
 @end

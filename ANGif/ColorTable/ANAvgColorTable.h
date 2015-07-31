@@ -8,8 +8,8 @@
 
 #import "ANColorTable.h"
 
-@interface ANAvgColorTable : ANColorTable {
-	
-}
+@interface ANAvgColorTable : ANColorTable
+
+- (UInt8)addColor:(ANGifColor)aColor;
 
 @end

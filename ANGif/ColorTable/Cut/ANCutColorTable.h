@@ -16,4 +16,5 @@
 
 - (instancetype)initWithTransparentFirst:(BOOL)hasAlpha pixelSource:(id<ANGifImageFramePixelSource>)pixelSource;
 
+- (UInt8)addColor:(ANGifColor)aColor;
 @end

@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "ANColorTable.h"
 
-@interface ANMutableColorArray : NSObject {
-	ANGifColor * _colors;
-	NSUInteger _entryCount;
-	NSUInteger _totalAlloced;
-}
+NS_ASSUME_NONNULL_BEGIN
+
+@interface ANMutableColorArray : NSObject
+
+- (instancetype)init;
 
 @property (readonly, NS_NONATOMIC_IOSONLY) NSUInteger count;
 - (void)addColor:(ANGifColor)color;
@@ -26,3 +26,5 @@
 - (ANGifColor)averagePopFirst;
 
 @end
+
+NS_ASSUME_NONNULL_END

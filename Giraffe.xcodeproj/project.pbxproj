@@ -28,9 +28,9 @@
 		55916F331B6BDC280098F38E /* ANAvgColorTable.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B94146572210095DA13 /* ANAvgColorTable.m */; };
 		55916F341B6BDC280098F38E /* ANColorTable.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B95146572210095DA13 /* ANColorTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55916F351B6BDC280098F38E /* ANColorTable.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B96146572210095DA13 /* ANColorTable.m */; };
-		55916F361B6BDC350098F38E /* ANCutColorTable.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B98146572210095DA13 /* ANCutColorTable.h */; };
+		55916F361B6BDC350098F38E /* ANCutColorTable.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B98146572210095DA13 /* ANCutColorTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55916F371B6BDC350098F38E /* ANCutColorTable.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B99146572210095DA13 /* ANCutColorTable.m */; };
-		55916F381B6BDC350098F38E /* ANMutableColorArray.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B9A146572210095DA13 /* ANMutableColorArray.h */; };
+		55916F381B6BDC350098F38E /* ANMutableColorArray.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B9A146572210095DA13 /* ANMutableColorArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55916F391B6BDC350098F38E /* ANMutableColorArray.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B9B146572210095DA13 /* ANMutableColorArray.m */; };
 		55916F3A1B6BDC430098F38E /* ANGifDataSubblock.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9A0B9D146572210095DA13 /* ANGifDataSubblock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55916F3B1B6BDC430098F38E /* ANGifDataSubblock.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0B9E146572210095DA13 /* ANGifDataSubblock.m */; };

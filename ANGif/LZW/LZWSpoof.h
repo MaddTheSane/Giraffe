@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithData:(NSData *)initialData NS_DESIGNATED_INITIALIZER;
 - (instancetype)init NS_DESIGNATED_INITIALIZER;
+
 - (void)addBit:(BOOL)flag;
 - (BOOL)getBitAtIndex:(NSUInteger)bitIndex;
 
